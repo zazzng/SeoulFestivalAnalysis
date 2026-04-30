@@ -1,12 +1,13 @@
 import "./StoryTellingPage3.css";
 
+const base = import.meta.env.BASE_URL;
 const POSTERS = [
-  "/Fall.do.png",
-  "/Fall1.do.png",
-  "/Fall2.do.jpeg",
-    "/Fall3.do.png",
-    "/Fall4.do.jpeg",
-    "/Fall5.do.jpeg",
+  `${base}Fall.do.png`,
+  `${base}Fall1.do.png`,
+  `${base}Fall2.do.jpeg`,
+  `${base}Fall3.do.png`,
+  `${base}Fall4.do.jpeg`,
+  `${base}Fall5.do.jpeg`,
 ];
 
 export default function StoryTellingPage3() {

@@ -66,7 +66,7 @@ function App() {
         <div className="graphic-header">KAIST - Industrial Design</div>
 
         <motion.img 
-          src="/seoulCity1.jpg"
+          src={`${import.meta.env.BASE_URL}seoulCity1.jpg`}
           className="graphic-image"
         />
 

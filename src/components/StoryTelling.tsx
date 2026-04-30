@@ -19,9 +19,10 @@ export default function StoryTelling() {
     const scale1 = useTransform(scrollYProgress, [0, 1], [1, 2]);
     const scale2 = useTransform(scrollYProgress, [0, 1], [1, 2]);
 
+    const base = import.meta.env.BASE_URL;
     const pictures = [
-        { src: "/Guro.jpeg", scale: scale1, className: "image1" },
-        { src: "/ManInHanbok.jpeg", scale: scale2, className: "image2" }
+        { src: `${base}Guro.jpeg`, scale: scale1, className: "image1" },
+        { src: `${base}ManInHanbok.jpeg`, scale: scale2, className: "image2" }
     ];
 
     return (

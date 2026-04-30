@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import "./StoryTellingPage1.css";
 
+const base = import.meta.env.BASE_URL;
 const IMAGES = [
-  ["/SpringEvent.do.png", "/SpringEvent1.do.jpeg", "/SpringEvent2.do.png"],
-  ["/SpringEvent3.do.jpeg", "/SPringEvent4.do.jpeg", "/SpringEvent5.do.jpeg"],
-  ["/SpringEvent.do.png", "/SpringEvent1.do.jpeg", "/SpringEvent2.do.png"],
+  [`${base}SpringEvent.do.png`, `${base}SpringEvent1.do.jpeg`, `${base}SpringEvent2.do.png`],
+  [`${base}SpringEvent3.do.jpeg`, `${base}SPringEvent4.do.jpeg`, `${base}SpringEvent5.do.jpeg`],
+  [`${base}SpringEvent.do.png`, `${base}SpringEvent1.do.jpeg`, `${base}SpringEvent2.do.png`],
 ];
 
 export default function StoryTellingPage1() {

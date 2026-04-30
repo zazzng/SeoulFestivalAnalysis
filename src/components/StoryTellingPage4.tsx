@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import "./StoryTellingPage4.css";
 
+const base = import.meta.env.BASE_URL;
 const IMAGES = [
-  ["/Winter.do.png", "/Winter4.do.png", "/Winter1.do.jpeg"],
-  ["/Winter2.do.jpeg", "/Winter5.do.jpeg", "/Winter.do.jpeg"],
-  ["/Winter3.do.jpeg", "/Winter2.do.jpeg", "/Winter4.do.png"],
+  [`${base}Winter.do.jpeg`, `${base}Winter4.do.png`, `${base}Winter1.do.jpeg`],
+  [`${base}Winter2.do.jpeg`, `${base}Winter5.do.jpeg`, `${base}Winter.do.jpeg`],
+  [`${base}Winter3.do.jpeg`, `${base}Winter2.do.jpeg`, `${base}Winter4.do.png`],
 ];
 
 export default function StoryTellingpage4() {
