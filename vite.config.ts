@@ -5,11 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/SeoulFestivalAnalysis/',
   plugins: [
-    react({
-      babel: {
-        plugins: [['babel-plugin-react-compiler']],
-      },
-    }),
+    react(),
   ],
   css: {
     devSourcemap: true,
