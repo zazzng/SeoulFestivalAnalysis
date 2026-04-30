@@ -1,0 +1,149 @@
+/* overall layout */
+.page3-wrapper {
+  min-height: 120dvh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  padding: 8vh 8vw;
+  gap: 6vw;
+  align-items: start;
+  color: #f3f1ec;
+  background: transparent;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.page3-wrapper * {
+  font-family: "Inter", sans-serif !important;
+}
+
+.page3-wrapper h1,
+.page3-wrapper h2 {
+  font-family: "Playfair Display", serif !important;
+}
+
+/* LEFT TEXT */
+.text-block h1 {
+  font-family: "Playfair Display", serif !important;
+  font-size: clamp(2.8rem, 4vw, 4.2rem) !important;
+  font-weight: 500 !important;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.text-block {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  color: #cfcac3;
+  line-height: 1.6;
+}
+
+.subtitle em {
+  font-style: italic;
+  color: #ffffff;
+}
+
+/* RIGHT CONTENT */
+.visual-block {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  min-width: 0;
+}
+
+/* season header */
+.page3-season-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+}
+
+.page3-title {
+  font-family: "Playfair Display", serif !important;
+  font-size: clamp(2.6rem, 3.2vw, 3.4rem) !important;
+  font-weight: 500 !important;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: #f3f1ec;
+}
+
+.page3-season-divider {
+  width: 48px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.35);
+  margin: 0.75rem 0 0.5rem 0;
+}
+
+.page3-season-desc {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #d2cec6;
+  max-width: 520px;
+  margin: 0;
+}
+
+.page3-season-desc em {
+  font-style: italic;
+  color: #ffffff;
+}
+
+.page3-season-desc.bottom {
+  margin: 3rem auto 0;
+  text-align: center;
+  max-width: 640px;
+  opacity: 0.85;
+}
+
+/* posters */
+.page3-poster-row {
+  display: flex;
+  gap: 1.75rem !important;
+  margin-top: 2rem !important;
+  justify-content: flex-start;
+  overflow: hidden;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -65vw;
+  margin-right: -50vw;
+  padding: 0 8vw;
+  box-sizing: border-box;
+}
+
+.page3-poster-row img {
+  width: 300px !important;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+  transition: transform 0.4s ease;
+  will-change: transform;
+  backface-visibility: hidden;
+  animation: slideLeftSlow 20s linear infinite;
+}
+
+@keyframes slideLeftSlow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-120% - 1.75rem));
+  }
+}
+
+.page3-poster-row img:hover {
+  transform: translateY(-6px);
+  will-change: transform;
+}

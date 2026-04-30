@@ -1,0 +1,46 @@
+.container {
+    height: 300vh;
+    position: relative;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.el {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageContainer {
+    width: 15vw;
+    height: 15vw;
+    position: relative;
+}
+
+.imageContainer img {
+    object-fit: cover;
+    width: 15vw;
+    height: 15vw;
+}
+
+/* .image1 .imageContainer {
+    top: -10vh;
+    left: -15vw;
+    width: 15vw;
+    height: 45vh;
+    position: absolute;
+} */
+
+/* .image2 .imageContainer {
+    left: 27.5vw;
+    width: 15vw;
+    height: 55vh;
+    position: absolute;
+} */

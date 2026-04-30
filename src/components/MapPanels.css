@@ -1,0 +1,273 @@
+.panels-root {
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  height: 800px;
+  gap: 16px;
+  padding: 16px;
+}
+
+/* LEFT SECTION - MAP WITH FILTER */
+.left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+
+.filter-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+
+.filter-panel h3 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.filter-panel > label,
+.filter-panel > div > label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 16px;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.filter-panel select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+/* Map container */
+.left-map {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+
+.empty { 
+  color: #777; 
+  font-size: 14px; 
+}
+
+.compare-item { 
+  padding: 8px 10px;
+  margin: 4px 0;
+  background: #f0f0f0;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.compare-item:hover {
+  background: #e0e0e0;
+  transform: translateX(2px);
+}
+
+.compare-item .remove-icon {
+  opacity: 0;
+  color: #d32f2f;
+  font-weight: bold;
+  margin-left: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.compare-item:hover .remove-icon {
+  opacity: 1;
+}
+
+.btn-reset {
+  margin-top: auto;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background: #999;
+  color: white;
+  width: 100%;
+}
+
+.btn-reset:hover {
+  background: #777;
+}
+
+.stat {
+  margin: 8px 0;
+}
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.btn-select {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background: #ff7f50;
+  color: white;
+}
+
+.btn-select:hover {
+  background: #ff6b35;
+}
+
+.btn-view {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background: #1976d2;
+  color: white;
+}
+
+.btn-view:hover {
+  background: #1565c0;
+}
+
+/* RIGHT SIDEBAR - SELECTED & RADAR */
+.right-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Top panel - Selected for Compare */
+.selected-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 0.75;
+  min-height: 0;
+}
+
+.selected-panel > div:first-child {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 8px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.selected-panel > div:first-child::-webkit-scrollbar {
+  width: 8px;
+}
+
+.selected-panel > div:first-child::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.selected-panel > div:first-child::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  min-height: 40px;
+}
+
+.selected-panel > div:first-child::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.selected-panel h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+/* Bottom panel - Radar Comparison */
+.radar-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1;
+  min-height: 0;
+}
+
+.radar-panel > div {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Detail overlay */
+.detail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.detail-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #999;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.checkbox-row input {
+  transform: scale(1.2);
+}

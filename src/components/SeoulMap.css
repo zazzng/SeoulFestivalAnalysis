@@ -1,0 +1,87 @@
+.map-container {
+  width: 100% !important;
+  height: 100% !important;
+  background: (66, 66, 66);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.leaflet-interactive {
+  cursor: pointer;
+}
+
+.map-tooltip {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: normal;
+  max-width: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.15s ease-in;
+  line-height: 1.5;
+}
+
+.tooltip-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.tooltip-subtitle {
+  font-size: 11px;
+  color: #bbb;
+  margin-bottom: 6px;
+}
+
+.tooltip-desc {
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  opacity: 0.95;
+}
+
+.tooltip-atmosphere {
+  font-size: 11px;
+  margin-bottom: 6px;
+  color: #ffc107;
+}
+
+.tooltip-atmosphere .label,
+.tooltip-highlights .label,
+.tooltip-attractions .label {
+  font-weight: 700;
+  color: #fff;
+}
+
+.tooltip-highlights {
+  font-size: 11px;
+  color: #90caf9;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.tooltip-attractions {
+  font-size: 11px;
+  color: #81c784;
+  line-height: 1.4;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

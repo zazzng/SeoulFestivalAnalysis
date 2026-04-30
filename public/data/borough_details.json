@@ -1,0 +1,203 @@
+{
+  "Jongno-gu": {
+    "name": "Jongno-gu",
+    "description": "Historic heart of Seoul with traditional palaces, temples, and cultural heritage sites. Known for traditional Korean architecture and historic landmarks dating back centuries.",
+    "highlights": ["Gyeongbokgung Palace", "Bukchon Hanok Village", "Insadong Art District", "Jogyesa Temple"],
+    "attractions": "Ancient palaces, traditional tea houses, art galleries, antique shops",
+    "atmosphere": "Historic, cultural, artistic",
+    "eventCount": 0
+  },
+  "Jung-gu": {
+    "name": "Jung-gu",
+    "description": "Downtown Seoul blending modern skyscrapers with traditional markets and cultural landmarks. The commercial and cultural heart of the city.",
+    "highlights": ["Myeongdong Shopping District", "Namdaemun Market", "Deoksugung Palace", "Seoul Plaza"],
+    "attractions": "Shopping malls, traditional markets, historic palaces, museums",
+    "atmosphere": "Bustling, modern, commercial",
+    "eventCount": 0
+  },
+  "Yongsan-gu": {
+    "name": "Yongsan-gu",
+    "description": "Vibrant district with international atmosphere, trendy shops, restaurants, and cultural venues. Popular with expats and young professionals.",
+    "highlights": ["Itaewon Shopping District", "War Memorial of Korea", "Yongsan Electronics Market", "Dragon Hill Spa"],
+    "attractions": "International restaurants, boutique shops, electronic markets, cultural museums",
+    "atmosphere": "Cosmopolitan, trendy, international",
+    "eventCount": 0
+  },
+  "Seongdong-gu": {
+    "name": "Seongdong-gu",
+    "description": "Emerging arts and culture district with modern galleries, design studios, and hip cafes along the Han River.",
+    "highlights": ["Seongsu Cafe Street", "Design Plaza", "Ttukseom Park", "Seoul Design Biennial"],
+    "attractions": "Art galleries, design studios, trendy cafes, riverside parks",
+    "atmosphere": "Artistic, creative, bohemian",
+    "eventCount": 0
+  },
+  "Gwangjin-gu": {
+    "name": "Gwangjin-gu",
+    "description": "Entertainment and leisure district with theme parks, shopping centers, and recreational facilities.",
+    "highlights": ["Gungnae Park", "Han River Park", "Lotte World", "Sports Facilities"],
+    "attractions": "Theme parks, water parks, entertainment venues, shopping malls",
+    "atmosphere": "Fun, lively, recreational",
+    "eventCount": 0
+  },
+  "Dongdaemun-gu": {
+    "name": "Dongdaemun-gu",
+    "description": "Major shopping and fashion hub featuring both modern malls and traditional wholesale markets. Center of Seoul's fashion industry.",
+    "highlights": ["Dongdaemun Design Plaza (DDP)", "Dongdaemun Market", "Heunginjimun Gate", "Cheonggyecheon Stream"],
+    "attractions": "Fashion markets, design complex, historic gates, shopping streets",
+    "atmosphere": "Fashionable, commercial, bustling",
+    "eventCount": 0
+  },
+  "Jungnang-gu": {
+    "name": "Jungnang-gu",
+    "description": "Residential area northeast of downtown with parks, natural scenery, and cultural spaces along the Jungnang Stream.",
+    "highlights": ["Jungnang Stream Park", "Myeongneung Pine Forest", "Nokseom Island", "Outdoor Recreation"],
+    "attractions": "Parks, nature trails, recreational facilities, cultural centers",
+    "atmosphere": "Peaceful, residential, natural",
+    "eventCount": 0
+  },
+  "Seongbuk-gu": {
+    "name": "Seongbuk-gu",
+    "description": "Cultural and artistic district with universities, temples, and parks. Strong artistic community with galleries and cultural events.",
+    "highlights": ["Seongbuksan Park", "Seoul Craft Biennial", "Jogyesa Temple", "University District"],
+    "attractions": "Art galleries, temples, parks, student-friendly cafes, cultural venues",
+    "atmosphere": "Intellectual, artistic, cultural",
+    "eventCount": 0
+  },
+  "Gangbuk-gu": {
+    "name": "Gangbuk-gu",
+    "description": "Northern district blessed with natural beauty, featuring Bukhansan National Park and mountain hiking trails.",
+    "highlights": ["Bukhansan National Park", "Namsan Park", "Sulamsa Temple", "Mountain Trails"],
+    "attractions": "National parks, hiking trails, temples, mountain scenery",
+    "atmosphere": "Natural, peaceful, outdoor-oriented",
+    "eventCount": 0
+  },
+  "Dobong-gu": {
+    "name": "Dobong-gu",
+    "description": "Mountain-rich area with abundant nature trails, parks, and outdoor recreation facilities. Popular with hikers and nature enthusiasts.",
+    "highlights": ["Dobongsan Mountain", "Dobong Stream Park", "Suseong Valley", "Hiking Trails"],
+    "attractions": "Mountains, valleys, parks, hiking trails, outdoor activities",
+    "atmosphere": "Natural, outdoorsy, scenic",
+    "eventCount": 0
+  },
+  "Nowon-gu": {
+    "name": "Nowon-gu",
+    "description": "Peaceful residential district with shopping malls, parks, and sports facilities. Family-friendly neighborhood.",
+    "highlights": ["Sanggye Park", "Seoul Taekwondo Park", "Shopping Centers", "Sports Complex"],
+    "attractions": "Parks, sports facilities, shopping malls, taekwondo venues",
+    "atmosphere": "Residential, family-friendly, commercial",
+    "eventCount": 0
+  },
+  "Eunpyeong-gu": {
+    "name": "Eunpyeong-gu",
+    "description": "District blending traditional and modern elements with historic hanok villages and contemporary cultural centers.",
+    "highlights": ["Eunpyeong Hanok Village", "Bukaksan Mountain", "Cultural Centers", "Traditional Village"],
+    "attractions": "Traditional hanok houses, mountain trails, cultural centers, village cafes",
+    "atmosphere": "Traditional, cultural, tranquil",
+    "eventCount": 0
+  },
+  "Seodaemun-gu": {
+    "name": "Seodaemun-gu",
+    "description": "Historical district with important cultural landmarks, universities, and parks. Rich in Korean independence movement history.",
+    "highlights": ["Seodaemun Prison History Hall", "Ewha Woman's University", "Naksan Park", "Historic Sites"],
+    "attractions": "Historic museums, universities, parks, memorial sites",
+    "atmosphere": "Historic, educational, cultural",
+    "eventCount": 0
+  },
+  "Mapo-gu": {
+    "name": "Mapo-gu",
+    "description": "Trendy district with vibrant nightlife, international restaurants, cafes, and riverside attractions. Popular with young professionals.",
+    "highlights": ["Hongik University Area", "Han River Park", "Yeouido Park", "Nightlife District"],
+    "attractions": "Bars, restaurants, cafes, river parks, university district",
+    "atmosphere": "Trendy, lively, artistic",
+    "eventCount": 0
+  },
+  "Yangcheon-gu": {
+    "name": "Yangcheon-gu",
+    "description": "Quiet, family-friendly residential area with shopping centers, parks, and river activities.",
+    "highlights": ["Mokdong Shopping Center", "Han River Park", "Mokdong Stadium", "Parks"],
+    "attractions": "Shopping malls, parks, sports facilities, residential areas",
+    "atmosphere": "Peaceful, residential, family-oriented",
+    "eventCount": 0
+  },
+  "Gangseo-gu": {
+    "name": "Gangseo-gu",
+    "description": "Western district with direct access to Incheon International Airport and extensive han river parks.",
+    "highlights": ["Han River Park", "Nuldeuri Park", "Space Walk", "Airport Access"],
+    "attractions": "River parks, airport facilities, recreational areas, nature paths",
+    "atmosphere": "Scenic, accessible, natural",
+    "eventCount": 0
+  },
+  "Guro-gu": {
+    "name": "Guro-gu",
+    "description": "Industrial and commercial district with modern business complexes and digital technology hubs.",
+    "highlights": ["Guro Digital Complex", "Guro Park", "Digital Valley", "Business Centers"],
+    "attractions": "Tech companies, business centers, industrial parks, modern facilities",
+    "atmosphere": "Modern, commercial, business-oriented",
+    "eventCount": 0
+  },
+  "Geumcheon-gu": {
+    "name": "Geumcheon-gu",
+    "description": "Industrial zone with business and manufacturing areas, gradually transforming with modern commercial development.",
+    "highlights": ["Geumcheon Industrial Complex", "Sadang Park", "Commercial Centers", "Universities"],
+    "attractions": "Industrial complexes, business areas, parks, educational institutions",
+    "atmosphere": "Industrial, developing, commercial",
+    "eventCount": 0
+  },
+  "Yeongdeungpo-gu": {
+    "name": "Yeongdeungpo-gu",
+    "description": "Financial and commercial center with riverside attractions, modern skyscrapers, and shopping complexes.",
+    "highlights": ["Yeouido Park", "IFC Seoul", "63 Building", "Financial District"],
+    "attractions": "Skyscrapers, parks, shopping malls, financial institutions, observation decks",
+    "atmosphere": "Modern, financial, commercial",
+    "eventCount": 0
+  },
+  "Dongjak-gu": {
+    "name": "Dongjak-gu",
+    "description": "Cultural and governmental district south of Han River with museums, parks, and important administrative buildings.",
+    "highlights": ["National Assembly Building", "War Memorial", "Parks", "Cultural Venues"],
+    "attractions": "Government buildings, museums, cultural centers, parks",
+    "atmosphere": "Governmental, cultural, institutional",
+    "eventCount": 0
+  },
+  "Gwanak-gu": {
+    "name": "Gwanak-gu",
+    "description": "University district with vibrant student culture, mountain scenery, and student-friendly cafes and restaurants.",
+    "highlights": ["Seoul National University", "Gwanaksan Mountain", "Student District", "University Cafes"],
+    "attractions": "University campus, mountains, parks, student-friendly venues",
+    "atmosphere": "Youthful, academic, lively",
+    "eventCount": 0
+  },
+  "Seocho-gu": {
+    "name": "Seocho-gu",
+    "description": "Wealthy residential area with upscale shopping, fine dining, and prestigious cultural institutions.",
+    "highlights": ["Gangnam Station Area", "Coex Mall", "Seoul Forest", "Luxury Shopping"],
+    "attractions": "Luxury shops, fine dining, cultural centers, parks, art galleries",
+    "atmosphere": "Upscale, modern, prestigious",
+    "eventCount": 0
+  },
+  "Gangnam-gu": {
+    "name": "Gangnam-gu",
+    "description": "Most prestigious district known for luxury brands, high-end restaurants, nightlife, and trendy entertainment venues.",
+    "highlights": ["Gangnam Station", "Luxury Shopping Streets", "Han River Park", "Entertainment"],
+    "attractions": "Designer stores, restaurants, nightclubs, parks, cultural venues",
+    "atmosphere": "Luxurious, trendy, vibrant",
+    "eventCount": 0
+  },
+  "Songpa-gu": {
+    "name": "Songpa-gu",
+    "description": "Modern residential district with Olympic facilities, theme parks, and family-friendly entertainment.",
+    "highlights": ["Olympic Park", "Lotte World", "Jamsil Sports Complex", "Han River Park"],
+    "attractions": "Theme parks, sports complexes, parks, modern residences, shopping",
+    "atmosphere": "Modern, recreational, family-friendly",
+    "eventCount": 0
+  },
+  "Gangdong-gu": {
+    "name": "Gangdong-gu",
+    "description": "Eastern residential area with parks, cultural venues, and river activities. Peaceful neighborhood with natural charm.",
+    "highlights": ["Nakseonam Park", "Han River Park", "Gwangnaru Park", "Cultural Centers"],
+    "attractions": "Parks, river areas, cultural venues, recreational facilities",
+    "atmosphere": "Peaceful, natural, residential",
+    "eventCount": 0
+  }
+}
+

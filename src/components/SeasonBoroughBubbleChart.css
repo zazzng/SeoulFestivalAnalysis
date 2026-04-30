@@ -1,0 +1,113 @@
+.season-borough-section {
+  padding: 10px;
+  background: rgba(255, 248, 244, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  margin: 15px 0;
+}
+
+.controls-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.bubble-svg {
+  width: 100%;
+  height: 500px;
+}
+
+.bubble-text {
+  font-size: 15px;
+  fill: #fff;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.bubble-tooltip {
+  position: absolute;
+  background: #fff;
+  padding: 6px 10px;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  font-size: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+  pointer-events: none;
+}
+
+.ranking-list {
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  width: 230px;
+  padding: 0;
+  font-family: "Georgia", serif;
+}
+
+.ranking-item {
+    display: flex;
+    gap: 8px;
+    padding: 4px 6px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.ranking-item:hover,
+.ranking-item.is-hovered {
+    background: rgba(0,0,0,0.7);
+}
+
+.ranking-list ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.ranking-list li {
+  margin: 4px 0;
+  line-height: 1.4;
+  display: flex;
+  gap: 6px;
+}
+
+.rank-num {
+  color: #d96b4f;
+  width: 32px;
+  text-align: right;
+  font-weight: 600;
+}
+
+.rank-name {
+  flex: 1;
+  color: #b44b39;
+}
+
+.rank-value {
+  color: yellow;
+  font-size: 12px;
+}
+
+.tooltip {
+  background: rgba(0,0,0,0.75);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  position: absolute;
+  white-space: nowrap;
+  transform: translate(-50%, -100%);
+}
+
+.grid > div {
+  min-width: 0;
+}
+
+
+

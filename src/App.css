@@ -1,0 +1,232 @@
+/* App.css */
+/* floating text box */
+.caption-box {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  max-width: 1000px;
+  
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 2rem; 
+  z-index: 5;
+}
+
+.graphic h1 {
+  margin-bottom: 2rem;
+  font-size: 6rem;
+  color: #ffffff;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  font-family: 'Georgia', serif;
+}
+
+/* ensure graphic container can hold absolutely positioned items */
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: PT Serif;
+}
+
+
+.App {
+  font-family: PT Serif;
+  color: #333;
+  line-height: 1.5;
+  min-height: 100%;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.graphic-wrapper {
+  height: 220vh; /* controls scroll length */
+  position: relative;
+  z-index: 0;
+}
+
+.graphic {
+  /* position: fixed; */
+  top: 0;
+  height: 100dvh; /* always viewport height */
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  z-index: 0;
+  position: relative;
+}
+
+.graphic-header {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: #FFD700;
+  font-weight: 400;
+  letter-spacing: 2px;
+  z-index: 10;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.graphic-author {
+  margin-top: 0.8rem;
+  font-size: 1.8rem;
+  font-style: normal;
+  color: white;
+  letter-spacing: 0.3px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+}
+
+.graphic-footer {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.3rem;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 20px;
+  border-radius: 2px;
+  z-index: 10;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.graphic-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top right;
+  transform-origin: top right;
+}
+
+.graphic-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(20, 25, 45, 0.65) 0%,
+    rgba(20, 25, 45, 0.45) 35%,
+    rgba(20, 25, 45, 0.15) 65%,
+    rgba(20, 25, 45, 0.05) 100%
+  );
+  z-index: 1;
+  will-change: opacity;
+}
+
+/* Graphic Introduction Section */
+.graphicIntroduction {
+  position: relative;
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Graphic intro image */
+.graphic-image-intro {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  will-change: transform;
+  transform-origin: center;
+}
+
+/* Scrollable steps container */
+#scrolly {
+  position: relative;
+  z-index: 2;
+}
+
+/* Each step */
+.step {
+  min-height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 12rem;
+  background: rgba(31, 31, 31); /* semi-transparent for readability */
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+/* Headings - only direct h2 children (step titles) */
+.step > h1, .step > h2, .step > h3 {
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  font-size: 3.5rem;
+  text-align: center;
+  color: white;
+}
+
+/* Step-specific title styles */
+.step[data-step="1"] h2 {
+  font-size: 5rem;
+  color: #ff8a4c;
+  font-weight: 700;
+}
+
+.step[data-step="2"] h2 {
+  font-size: 5rem;
+  color: white;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.step[data-step="3"] h2 {
+  font-size: 5rem;
+  color: white;
+  font-weight: 800;
+}
+
+.step[data-step="5"] h2 {
+  font-size: 5rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Paragraph text */
+.step p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Optional: smooth scroll for better experience - disabled for Safari compatibility */
+/* html {
+  scroll-behavior: smooth;
+} */
+
+.step {
+  position: relative;
+  z-index: 2;
+}
+
+/* h3 styles - subtitle only (after h2 in step, using general sibling) */
+.step h2 ~ h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  margin: -0.5rem 0 6rem 0;
+  letter-spacing: 0.3px;
+  font-style: italic;
+  opacity: 0.85;
+  line-height: 1.6;
+}

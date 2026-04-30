@@ -1,0 +1,168 @@
+.page4-section {
+  min-height: 200dvh;
+  padding: 12vh 8vw;
+  text-align: center;
+  color: #f3f1ec;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter", sans-serif !important;
+  position: relative;
+}
+
+.page4-section *,
+.page4-section h1,
+.page4-section h2,
+.page4-section h3,
+.page4-section p,
+.page4-section strong {
+  font-family: "Inter", sans-serif !important;
+}
+
+.intro-block {
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.intro-title {
+  font-family: "Playfair Display", serif !important;
+  font-size: clamp(2.6rem, 3.4vw, 3.8rem) !important;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  margin-bottom: 1.2rem;
+  line-height: 1.1;
+}
+
+.intro-sub {
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #d6d1c8;
+  margin: 0;
+}
+
+.intro-sub strong {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.divider {
+  display: none;
+}
+
+.season-block {
+  max-width: 680px;
+  margin-bottom: 3rem;
+}
+
+.page4-section h1,
+.page4-section h2 {
+  font-family: "Playfair Display", serif !important;
+}
+
+.page4-title {
+  font-family: "Playfair Display", serif !important;
+  font-size: clamp(1.8rem, 2.2vw, 2.2rem) !important;
+  font-weight: 500 !important;
+  margin: 0 0 1rem 1rem !important;
+  letter-spacing: -0.01rem !important;
+}
+
+.season-text {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #d0cbc2;
+  margin: 30px 0 0 0;
+}
+
+.season-text em {
+  font-style: italic;
+  color: #ffffff;
+}
+
+.page4-poster-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+  justify-content: center;
+  position: relative;
+  height: 520px;
+  align-items: center;
+}
+
+.page4-poster-set {
+  display: flex;
+  gap: 4rem !important;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform;
+  backface-visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.page4-poster-set.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.page4-poster-row img {
+  width: 300px !important;
+  flex-shrink: 0;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  opacity: 0;
+  transform: scale(0.5) translateY(50px);
+  transition: opacity 0.4s ease, 
+              transform 0.4s cubic-bezier(0.20, 1.20, 0.64, 1);
+}
+
+.page4-poster-set.pop img,
+.page4-poster-row.second-set img.pop {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.page4-poster-row img:hover {
+  transform: translateY(-8px);
+  will-change: transform;
+}
+
+/* Second Content Block */
+.second-content-block {
+  margin-top: 10rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.second-content-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Second poster row - static layout */
+.page4-poster-row.second-set {
+  position: static;
+  height: auto;
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.page4-poster-row.second-set img {
+  opacity: 0;
+  transform: scale(0.5) translateY(50px);
+  transition: opacity 0.4s ease, 
+              transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
