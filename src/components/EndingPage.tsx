@@ -96,7 +96,7 @@ export default function EndingPage() {
           <p className="ending-subtitle">Depends on Timing</p>
           <p className="ending-description">
             Seoul never stops surprising. With <span className="highlight">{stats.totalEvents}</span> cultural events across the city,
-            there's always something happening—somewhere that matches your travel vibe.
+            there's always something happening, somewhere that matches your travel vibe.
           </p>
         </div>
         <div className="ending-hero-overlay" />
