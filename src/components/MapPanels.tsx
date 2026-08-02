@@ -7,6 +7,14 @@ import "./MapPanels.css";
 
 type RawEvent = Record<string, any>;
 
+// Same category -> chip modifier mapping used by the hero filter panel in App.css
+const CHIP_CLASS: Record<string, string> = {
+  All: "filter-chip--all",
+  "Performance & Entertainment": "filter-chip--performance",
+  "Festivals & Outdoor Culture": "filter-chip--festivals",
+  "Art / Culture Experience": "filter-chip--art",
+};
+
 interface MapPanelsProps {
   compareList: string[];
   setCompareList: (list: string[]) => void;
@@ -86,10 +94,10 @@ const MapPanels: React.FC<MapPanelsProps> = ({
       {/* LEFT SIDE */}
       <div className="left-section">
         <div className="filter-panel">
-          <h3>Type of Event</h3>
+          <h3 className="filter-panel-title">Type of Event</h3>
 
           {/* All checkbox */}
-          <label className="checkbox-row">
+          <label className={`filter-chip ${CHIP_CLASS.All} ${filter === "All" ? "is-active" : ""}`}>
             <input
               type="checkbox"
               checked={filter === "All"}
@@ -102,7 +110,7 @@ const MapPanels: React.FC<MapPanelsProps> = ({
           {classifications
             .filter((c) => c !== "All")
             .map((c) => (
-              <label key={c} className="checkbox-row">
+              <label key={c} className={`filter-chip ${CHIP_CLASS[c] ?? ""} ${Array.isArray(filter) && filter.includes(c) ? "is-active" : ""}`}>
                 <input
                   type="checkbox"
                   checked={Array.isArray(filter) ? filter.includes(c) : false}

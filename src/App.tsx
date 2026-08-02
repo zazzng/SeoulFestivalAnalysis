@@ -92,20 +92,19 @@ With festivals, performances, and cultural experiences happening across every se
 This view helps you slow down and explore Seoul by borough, revealing when each area comes alive and which seasons best match your travel vibe, so you can choose the right time and place to enjoy the events you love most.</h3>
           
           {/* Filter Panel */}
-          <div style={{ marginBottom: "20px", padding: "15px", backgroundColor: "#f5f5f5", borderRadius: "8px" }}>
-            <h4 style={{ marginBottom: "10px", color: "#1a1a1a" }}>Type of Event</h4>
+          <div className="filter-panel">
+            <h4 className="filter-panel-title">Type of Event</h4>
 
-            <label style={{ marginRight: "20px", cursor: "pointer", color: "#1a1a1a" }}>
+            <label className={`filter-chip filter-chip--all ${filter === "All" ? "is-active" : ""}`}>
               <input
                 type="checkbox"
                 checked={filter === "All"}
                 onChange={() => setFilter("All")}
-                style={{ marginRight: "8px" }}
               />
               All
             </label>
-            
-            <label style={{ marginRight: "20px", cursor: "pointer", color: "#FF6B6B", fontWeight: "bold" }}>
+
+            <label className={`filter-chip filter-chip--performance ${Array.isArray(filter) && filter.includes("Performance & Entertainment") ? "is-active" : ""}`}>
               <input
                 type="checkbox"
                 checked={Array.isArray(filter) ? filter.includes("Performance & Entertainment") : false}
@@ -121,12 +120,11 @@ This view helps you slow down and explore Seoul by borough, revealing when each 
                     }
                   }
                 }}
-                style={{ marginRight: "8px" }}
               />
               Performance & Entertainment
             </label>
-            
-            <label style={{ marginRight: "20px", cursor: "pointer", color: "#4CAF50", fontWeight: "bold" }}>
+
+            <label className={`filter-chip filter-chip--festivals ${Array.isArray(filter) && filter.includes("Festivals & Outdoor Culture") ? "is-active" : ""}`}>
               <input
                 type="checkbox"
                 checked={Array.isArray(filter) ? filter.includes("Festivals & Outdoor Culture") : false}
@@ -142,12 +140,11 @@ This view helps you slow down and explore Seoul by borough, revealing when each 
                     }
                   }
                 }}
-                style={{ marginRight: "8px" }}
               />
               Festivals & Outdoor Culture
             </label>
-            
-            <label style={{ cursor: "pointer", color: "#FFD700", fontWeight: "bold" }}>
+
+            <label className={`filter-chip filter-chip--art ${Array.isArray(filter) && filter.includes("Art / Culture Experience") ? "is-active" : ""}`}>
               <input
                 type="checkbox"
                 checked={Array.isArray(filter) ? filter.includes("Art / Culture Experience") : false}
@@ -163,7 +160,6 @@ This view helps you slow down and explore Seoul by borough, revealing when each 
                     }
                   }
                 }}
-                style={{ marginRight: "8px" }}
               />
               Art / Culture Experience
             </label>

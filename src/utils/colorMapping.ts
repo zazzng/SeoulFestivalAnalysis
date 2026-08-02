@@ -3,21 +3,21 @@
  * Each borough gets a unique, distinguishable color
  */
 export const BOROUGH_COLOR_PALETTE = [
-  "#1976d2", // Blue
-  "#ff8a4c", // Orange
-  "#4CAF50", // Green
-  "#FFD700", // Gold
-  "#FF6B6B", // Red
-  "#8B4789", // Purple
-  "#FF1493", // Deep Pink
-  "#00CED1", // Dark Turquoise
-  "#FF69B4", // Hot Pink
-  "#20B2AA", // Light Sea Green
-  "#FF8C00", // Dark Orange
-  "#7B68EE", // Medium Slate Blue
-  "#DC143C", // Crimson
-  "#48D1CC", // Medium Turquoise
-  "#FF4500", // Orange Red
+  "#2A46E0", // Cobalt
+  "#FF6B35", // Orange
+  "#2FBF8F", // Mint
+  "#F6B93C", // Warm Yellow
+  "#1C31A8", // Deep Cobalt
+  "#FFA35C", // Light Orange
+  "#1F9E73", // Deep Mint
+  "#D89A1F", // Amber
+  "#6C8CFF", // Light Cobalt
+  "#7EE0C0", // Light Mint
+  "#6A4C93", // Muted Violet
+  "#D6455D", // Berry Red
+  "#1C7C8C", // Muted Teal
+  "#FFD873", // Pale Gold
+  "#B23A2E", // Burnt Rust
 ];
 
 /**

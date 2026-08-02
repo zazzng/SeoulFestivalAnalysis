@@ -6,30 +6,31 @@
   padding: 8vh 8vw;
   gap: 6vw;
   align-items: start;
-  color: #f3f1ec;
+  color: var(--color-text);
   background: transparent;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
 
 .page2-wrapper * {
-  font-family: "Inter", sans-serif !important;
+  font-family: var(--font-body) !important;
 }
 
 .page2-wrapper h1,
 .page2-wrapper h2 {
-  font-family: "Playfair Display", serif !important;
+  font-family: var(--font-display) !important;
 }
 
 /* LEFT TEXT */
 .text-block h1 {
-  font-family: "Playfair Display", serif !important;
+  font-family: var(--font-display) !important;
   font-size: clamp(2.8rem, 4vw, 4.2rem) !important;
-  font-weight: 500 !important;
-  line-height: 1.1;
+  font-weight: 700 !important;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
   margin-bottom: 2rem;
-  color: #ffffff;
+  color: var(--color-ink);
 }
 
 .text-block {
@@ -40,15 +41,16 @@
 }
 
 .subtitle {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
   font-size: 1.1rem;
-  color: #cfcac3;
+  color: var(--color-text-muted);
   line-height: 1.6;
 }
 
 .subtitle em {
   font-style: italic;
-  color: #ffffff;
+  color: var(--color-ink);
+  font-weight: 600;
 }
 
 /* RIGHT CONTENT */
@@ -64,38 +66,46 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  
 }
 
 .page2-title {
-  font-family: "Playfair Display", serif !important;
-  font-size: clamp(2.6rem, 3.2vw, 3.4rem) !important;
-  font-weight: 500 !important;
+  display: inline-block;
+  font-family: var(--font-display) !important;
+  font-size: clamp(2rem, 2.6vw, 2.6rem) !important;
+  font-weight: 700 !important;
   line-height: 1.08;
   letter-spacing: -0.01em;
   margin: 0;
-  color: #f3f1ec;
+  color: var(--color-text-on-dark);
+  background: var(--color-accent);
+  border: var(--border-width-sm) solid var(--color-ink);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  width: fit-content;
+  transform: rotate(-1deg);
 }
 
 .page2-season-divider {
-  width: 48px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.35);
+  width: 64px;
+  height: var(--border-width-sm);
+  background: var(--color-ink);
+  border-radius: var(--radius-pill);
   margin: 0.75rem 0 0.5rem 0;
 }
 
 .page2-season-desc {
-  font-family: "Inter", sans-serif;
-  font-size: 0.95rem;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
   line-height: 1.65;
-  color: #d2cec6;
+  color: var(--color-text-muted);
   max-width: 520px;
   margin: 0;
 }
 
 .page2-season-desc em {
   font-style: italic;
-  color: #ffffff;
+  color: var(--color-ink);
+  font-weight: 600;
 }
 
 .page2-season-desc.bottom {
@@ -126,8 +136,9 @@
   width: 300px !important;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+  border-radius: var(--radius-lg);
+  border: var(--border-width) solid var(--color-ink);
+  box-shadow: var(--shadow-lg);
   transition: transform 0.4s ease;
   will-change: transform;
   backface-visibility: hidden;
@@ -144,6 +155,6 @@
 }
 
 .page2-poster-row img:hover {
-  filter: brightness(1.1);
+  filter: brightness(1.05);
   will-change: transform;
 }

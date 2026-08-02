@@ -12,12 +12,13 @@ import "./SeasonBoroughBubbleChart.css";
 
 type RawEvent = Record<string, any>;
 
-// Color palette for categories
+// Color palette for categories — mirrors the filter chip colors in App.css
+// (--color-accent, --color-mint, --color-secondary, --color-primary)
 const CATEGORY_COLORS: Record<string, string> = {
-  "Performance & Entertainment": "#FF6B6B",
-  "Festivals & Outdoor Culture": "#4CAF50",
-  "Art / Culture Experience": "#FFD700",
-  "All": "#90CAF9",
+  "Performance & Entertainment": "#FF6B35",
+  "Festivals & Outdoor Culture": "#2FBF8F",
+  "Art / Culture Experience": "#F6B93C",
+  "All": "#2A46E0",
 };
 
 const logValue = (v: number): number => Math.log10(v + 1);
@@ -182,9 +183,19 @@ const RadarChartWithAverage: React.FC<RadarChartProps> = ({ events: propsEvents,
     const rawValue = data[borough];
 
     return (
-      <div style={{ background: "white", color: "#1a1a1a", padding: "8px 12px", border: "1px solid #ddd", borderRadius: "6px", boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}>
-        <strong style={{ display: "block", marginBottom: "4px" }}>{label}</strong>
-        <div>{borough}: {typeof rawValue === "number" ? rawValue.toFixed(2) : rawValue}</div>
+      <div
+        style={{
+          background: "#FFFFFF",
+          color: "#14131C",
+          padding: "10px 14px",
+          border: "3px solid #14131C",
+          borderRadius: "12px",
+          boxShadow: "4px 4px 0 #14131C",
+          fontFamily: "'Space Grotesk', sans-serif",
+        }}
+      >
+        <strong style={{ display: "block", marginBottom: "4px", textTransform: "uppercase", fontSize: "0.8rem", letterSpacing: "0.04em" }}>{label}</strong>
+        <div style={{ fontWeight: 700 }}>{borough}: {typeof rawValue === "number" ? rawValue.toFixed(2) : rawValue}</div>
       </div>
     );
   };
@@ -212,9 +223,9 @@ const RadarChartWithAverage: React.FC<RadarChartProps> = ({ events: propsEvents,
       {boroughs.map((b) => (
         <div
           key={b}
-          className="w-[250px] p-8 rounded flex flex-col items-center justify-center"
+          className="card w-[250px] p-6 flex flex-col items-center justify-center"
         >
-          <h3 className="text-center text-[1.3rem] font-semibold mb-0 text-white">{b}</h3>
+          <h3 className="badge text-center mb-2">{b}</h3>
 
           <RadarChart
             key={`radar-${b}`}
@@ -225,12 +236,12 @@ const RadarChartWithAverage: React.FC<RadarChartProps> = ({ events: propsEvents,
             outerRadius={80}
             data={chartData}
           >
-            <PolarGrid stroke="#ddd" />
-            <PolarAngleAxis dataKey="season" style={{ fontSize: "12px" }} />
-            <PolarRadiusAxis 
-              domain={[0, Math.ceil(maxValue)]} 
+            <PolarGrid stroke="#14131C" strokeOpacity={0.15} />
+            <PolarAngleAxis dataKey="season" style={{ fontSize: "12px", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700 }} stroke="#14131C" />
+            <PolarRadiusAxis
+              domain={[0, Math.ceil(maxValue)]}
               tickCount={3}
-              style={{ fontSize: "1px", fill: "#ffffff" }} 
+              style={{ fontSize: "1px", fill: "#14131C" }}
             />
             
             {isAllMode ? (
@@ -239,9 +250,9 @@ const RadarChartWithAverage: React.FC<RadarChartProps> = ({ events: propsEvents,
                 key={`radar-${b}-all`}
                 name="All Categories"
                 dataKey={b}
-                stroke="#90CAF9"
-                fill="#90CAF9"
-                fillOpacity={0.6}
+                stroke="#2A46E0"
+                fill="#2A46E0"
+                fillOpacity={0.5}
               />
             ) : (
               // MODE 2 & 3: Single or multiple categories - separate layers per category

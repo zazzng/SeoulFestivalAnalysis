@@ -40,17 +40,19 @@ interface SeoulMapProps {
   boroughColorMap?: Record<string, string>;
 }
 
+// Mirrors the filter chip colors in App.css (--color-primary/--color-accent/--color-mint/--color-secondary)
 const COLOR_MAP: Record<string, string> = {
-  "All": "#90CAF9",
-  "Performance & Entertainment": "#FF6B6B",
-  "Festivals & Outdoor Culture": "#4CAF50",
-  "Art / Culture Experience": "#FFD700",
+  "All": "#2A46E0",
+  "Performance & Entertainment": "#FF6B35",
+  "Festivals & Outdoor Culture": "#2FBF8F",
+  "Art / Culture Experience": "#F6B93C",
 };
 
+// Border color matches --color-ink; Leaflet PathOptions is JS, not CSS, so it can't read the token directly.
 const baseStyle: PathOptions = {
-  color: "#333",
-  weight: 1.5,
-  fillColor: "#90CAF9",
+  color: "#14131C",
+  weight: 2.5,
+  fillColor: "#2A46E0",
   fillOpacity: 0.2,
 };
 
@@ -143,7 +145,7 @@ const SeoulMap: React.FC<SeoulMapProps> = ({ boroughs: _boroughs, onSelectBoroug
       ...baseStyle,
       fillColor: isSelected ? (boroughColorMap[boroughName] || baseColor) : baseColor,
       fillOpacity: opacity,
-      weight: isSelected ? 2.5 : 1.5,
+      weight: isSelected ? 4 : 2,
     };
   };
 

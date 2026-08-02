@@ -2,22 +2,19 @@
   min-height: 200dvh;
   padding: 12vh 8vw;
   text-align: center;
-  color: #f3f1ec;
+  color: var(--color-text);
   background: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Inter", sans-serif !important;
+  font-family: var(--font-body) !important;
   position: relative;
 }
 
 .page1-section *,
-.page1-section h1,
-.page1-section h2,
-.page1-section h3,
 .page1-section p,
 .page1-section strong {
-  font-family: "Inter", sans-serif !important;
+  font-family: var(--font-body) !important;
 }
 
 .intro-block {
@@ -26,25 +23,26 @@
 }
 
 .intro-title {
-  font-family: "Playfair Display", serif !important;
+  font-family: var(--font-display) !important;
   font-size: clamp(2.6rem, 3.4vw, 3.8rem) !important;
-  font-weight: 500;
-  letter-spacing: -0.015em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   margin-bottom: 1.2rem;
-  line-height: 1.1;
+  line-height: 1.05;
+  color: var(--color-ink);
 }
 
 .intro-sub {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #d6d1c8;
+  color: var(--color-text-muted);
   margin: 0;
 }
 
 .intro-sub strong {
-  font-weight: 500;
-  color: #ffffff;
+  font-weight: 700;
+  color: var(--color-ink);
 }
 
 .divider {
@@ -58,28 +56,36 @@
 
 .page1-section h1,
 .page1-section h2 {
-  font-family: "Playfair Display", serif !important;
+  font-family: var(--font-display) !important;
 }
 
 .page1-title {
-  font-family: "Playfair Display", serif !important;
-  font-size: clamp(1.8rem, 2.2vw, 2.2rem) !important;
-  font-weight: 500 !important;
-  margin: 0 0 1rem 1rem !important;
+  display: inline-block;
+  font-family: var(--font-display) !important;
+  font-size: clamp(1.6rem, 2vw, 2rem) !important;
+  font-weight: 700 !important;
+  margin: 0 0 1.2rem !important;
   letter-spacing: -0.01rem !important;
+  color: var(--color-ink);
+  background: var(--color-mint);
+  border: var(--border-width-sm) solid var(--color-ink);
+  border-radius: var(--radius-pill);
+  padding: var(--space-2) var(--space-5) !important;
+  transform: rotate(-1deg);
 }
 
 .season-text {
-  font-family: "Inter", sans-serif;
-  font-size: 0.95rem;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
   line-height: 1.7;
-  color: #d0cbc2;
+  color: var(--color-text-muted);
   margin: 30px 0 0 0;
 }
 
 .season-text em {
   font-style: italic;
-  color: #ffffff;
+  color: var(--color-ink);
+  font-weight: 600;
 }
 
 .page1-poster-row {
@@ -116,13 +122,14 @@
   flex-shrink: 0;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  border-radius: var(--radius-lg);
+  border: var(--border-width) solid var(--color-ink);
+  box-shadow: var(--shadow-lg);
   will-change: transform, opacity;
   backface-visibility: hidden;
   opacity: 0;
   transform: scale(0.5) translateY(50px);
-  transition: opacity 0.4s ease, 
+  transition: opacity 0.4s ease,
               transform 0.4s cubic-bezier(0.20, 1.20, 0.64, 1);
 }
 
@@ -163,6 +170,6 @@
 .page1-poster-row.second-set img {
   opacity: 0;
   transform: scale(0.5) translateY(50px);
-  transition: opacity 0.4s ease, 
+  transition: opacity 0.4s ease,
               transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }

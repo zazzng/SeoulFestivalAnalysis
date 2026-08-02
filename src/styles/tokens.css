@@ -1,0 +1,70 @@
+/* Design tokens — single source of truth for the Neo-Brutalist system.
+   Every color, spacing, radius, shadow and type value used across the
+   app should reference one of these variables instead of a literal. */
+
+:root {
+  /* ---- color ---- */
+  --color-bg: #F6EEDD;         /* warm cream page background */
+  --color-surface: #FFFFFF;    /* cards */
+  --color-surface-alt: #FBF4E6;/* alternating section background */
+  --color-ink: #14131C;        /* near-black — default border + text + hero frame */
+  --color-ink-soft: rgba(20, 19, 28, 0.15);
+
+  --color-primary: #2A46E0;      /* cobalt blue */
+  --color-primary-dark: #1C31A8;
+  --color-secondary: #F6B93C;    /* warm yellow */
+  --color-secondary-dark: #D89A1F;
+  --color-accent: #FF6B35;       /* orange */
+  --color-accent-dark: #E5541F;
+  --color-mint: #2FBF8F;         /* mint green */
+  --color-mint-dark: #1F9E73;
+
+  --color-success: var(--color-mint);
+  --color-warning: var(--color-secondary);
+  --color-error: #E63946;
+
+  --color-text: var(--color-ink);
+  --color-text-muted: rgba(20, 19, 28, 0.65);
+  --color-text-on-dark: #F6EEDD;
+  --color-text-on-dark-muted: rgba(246, 238, 221, 0.75);
+
+  /* ---- spacing ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* ---- radius ---- */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* ---- border + shadow (hard offset, no blur) ---- */
+  --border-width: 4px;
+  --border-width-sm: 3px;
+  --shadow-sm: 4px 4px 0 var(--color-ink);
+  --shadow-md: 6px 6px 0 var(--color-ink);
+  --shadow-lg: 8px 8px 0 var(--color-ink);
+  --shadow-sm-hover: 6px 6px 0 var(--color-ink);
+  --shadow-press: 2px 2px 0 var(--color-ink);
+
+  /* ---- type ---- */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --text-sm: 1rem;
+  --text-base: 1.125rem;
+  --text-lg: 1.375rem;
+  --text-xl: 1.75rem;
+  --text-2xl: clamp(1.875rem, 1.6rem + 1.2vw, 2.5rem);
+  --text-3xl: clamp(2.25rem, 1.8rem + 2vw, 3.5rem);
+  --text-4xl: clamp(2.75rem, 2rem + 3.5vw, 5rem);
+  --text-5xl: clamp(3rem, 2rem + 5vw, 6.5rem);
+}

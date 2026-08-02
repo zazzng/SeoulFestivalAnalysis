@@ -98,6 +98,60 @@ export default function RadarCompare({ boroughNames, events, filter }: Props) {
 
   const boroughColorMap = createBoroughColorMap(boroughNames);
 
+  const CustomTooltip = ({ active, payload, label }: any) => {
+    if (!active || !payload || !payload.length) return null;
+    return (
+      <div
+        style={{
+          background: "#FFFFFF",
+          color: "#14131C",
+          padding: "10px 14px",
+          border: "3px solid #14131C",
+          borderRadius: "12px",
+          boxShadow: "4px 4px 0 #14131C",
+          fontFamily: "'Space Grotesk', sans-serif",
+        }}
+      >
+        <strong style={{ display: "block", marginBottom: "4px", textTransform: "uppercase", fontSize: "0.8rem", letterSpacing: "0.04em" }}>{label}</strong>
+        {payload.map((entry: any) => (
+          <div key={entry.dataKey} style={{ color: entry.color, fontWeight: 700 }}>
+            {entry.dataKey}: {entry.value}
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  const CustomLegend = ({ payload }: any) => {
+    if (!payload) return null;
+    return (
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", justifyContent: "center", marginBottom: "8px" }}>
+        {payload.map((entry: any) => (
+          <span
+            key={entry.value}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "6px",
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontWeight: 700,
+              fontSize: "0.85rem",
+              color: "#14131C",
+              background: "#FFFFFF",
+              border: "3px solid #14131C",
+              borderRadius: "999px",
+              padding: "4px 10px",
+              boxShadow: "3px 3px 0 #14131C",
+            }}
+          >
+            <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: entry.color, display: "inline-block" }} />
+            {entry.value}
+          </span>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <div style={{ width: "100%", height: "80vh", padding: "20px 0" }}>
       <ResponsiveContainer width="100%" height="100%">
@@ -106,22 +160,31 @@ export default function RadarCompare({ boroughNames, events, filter }: Props) {
           layout="vertical"
           margin={{ top: 20, right: 30, left: 40, bottom: 5 }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#14131C" strokeOpacity={0.15} />
 
-          <YAxis type="category" dataKey="season" width={80} />
+          <YAxis
+            type="category"
+            dataKey="season"
+            width={80}
+            tick={{ fill: "#14131C", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700 }}
+          />
 
           <XAxis
             type="number"
             domain={[0, "auto"]}
+            tick={{ fill: "#14131C", fontFamily: "'Inter', sans-serif" }}
             label={{
               value: "Event Count",
               position: "insideBottomRight",
               offset: 0,
+              fill: "#14131C",
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontWeight: 700,
             }}
           />
 
-          <Tooltip />
-          <Legend />
+          <Tooltip content={<CustomTooltip />} />
+          <Legend content={<CustomLegend />} />
 
           {boroughNames.map((b) => (
             <Line
