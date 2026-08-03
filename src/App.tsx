@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import SeasonBoroughBubbleChart from "./components/SeasonBoroughBubbleChart";
 import './App.css';
@@ -31,27 +31,8 @@ function App() {
     load();
   }, []);
 
-  // ----- SECTION 1: GRAPHIC -----
+  // ----- SECTION 1: HERO -----
   const graphicRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: graphicRef,
-    offset: ["start start", "end end"]
-  });
-
-  // 1. Convert scroll progress → zoom range
-  const rawZoom = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [1, 1.75]
-  );
-
-  // 2. Add smooth easing to the zoom value
-  useSpring(rawZoom, {
-    stiffness: 10,
-    damping: 5,
-    mass: 0.2,
-  });
-
 
   const { scrollYProgress: caption } = useScroll({
     target: graphicRef,
@@ -62,25 +43,34 @@ function App() {
 
   return (
     <div className="graphic-wrapper" ref={wrapperRef}>
-      <div className="graphic" ref={graphicRef}>
-        <div className="graphic-header">KAIST - Industrial Design</div>
+      <div className="hero" ref={graphicRef}>
+        <div className="hero-shape hero-shape--circle" aria-hidden="true" />
+        <div className="hero-shape hero-shape--square" aria-hidden="true" />
+        <div className="hero-shape hero-shape--triangle" aria-hidden="true" />
+        <div className="hero-shape hero-shape--ring" aria-hidden="true" />
+        <div className="hero-shape hero-shape--diamond" aria-hidden="true" />
+        <div className="hero-shape hero-shape--dot hero-shape--dot-a" aria-hidden="true" />
+        <div className="hero-shape hero-shape--dot hero-shape--dot-b" aria-hidden="true" />
+        <div className="hero-shape hero-shape--plus" aria-hidden="true" />
+        <div className="hero-shape hero-shape--zigzag" aria-hidden="true" />
 
-        <motion.img 
-          src={`${import.meta.env.BASE_URL}seoulCity1.jpg`}
-          className="graphic-image"
-        />
+        <div className="hero-frame">
+          <div className="hero-tags-row">
+            <span className="hero-tag hero-tag--kaist">KAIST - Industrial Design</span>
+            <span className="hero-tag hero-tag--course">Fall 2025 - ID 418 Data Analysis for Designer</span>
+          </div>
 
-        <div className="graphic-overlay" />
+          <motion.div
+            className="hero-content"
+            style={{ opacity: captionOpacity }}
+          >
+            <div className="hero-title-card">
+              <h1>Your Perfect Seoul Trip Depends On Timing</h1>
+            </div>
 
-        <motion.div 
-          className="caption-box"
-          style={{ opacity: captionOpacity }}
-        >
-          <h1>Your Perfect Seoul Trip Depends On Timing</h1>
-          <p className="graphic-author">by Thi H.G Nguyen</p>
-        </motion.div>
-
-        <div className="graphic-footer">Fall 2025 - ID 418 Data Analysis for Designer</div>
+            <p className="hero-author-card">by Thi H.G Nguyen</p>
+          </motion.div>
+        </div>
       </div>
 
       {/* SCROLLY SECTIONS */}
@@ -176,7 +166,7 @@ This view helps you slow down and explore Seoul by borough, revealing when each 
       <div className="step" data-step="3">
           <h2>Explore by Borough</h2>
           <h3>Still not sure where to go?
-Pick a few boroughs to compare and see how their seasons stack up — the patterns will help you spot the places that fit your travel mood best.</h3>
+Pick a few boroughs to compare and see how their seasons stack up  -  the patterns will help you spot the places that fit your travel mood best.</h3>
           <MapPanels 
             compareList={compareList} 
             setCompareList={setCompareList} 

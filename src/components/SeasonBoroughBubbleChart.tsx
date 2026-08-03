@@ -12,7 +12,7 @@ import "./SeasonBoroughBubbleChart.css";
 
 type RawEvent = Record<string, any>;
 
-// Color palette for categories — mirrors the filter chip colors in App.css
+// Color palette for categories  -  mirrors the filter chip colors in App.css
 // (--color-accent, --color-mint, --color-secondary, --color-primary)
 const CATEGORY_COLORS: Record<string, string> = {
   "Performance & Entertainment": "#FF6B35",

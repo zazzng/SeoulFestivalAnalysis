@@ -22,7 +22,7 @@ export default function StoryTellingPage2() {
         </h1>
 
         <p className="subtitle">
-          Every visit depends on the nights you explore—and the outdoor rhythm around you
+          Every visit depends on the nights you explore - and the outdoor rhythm around you
         </p>
       </div>
 

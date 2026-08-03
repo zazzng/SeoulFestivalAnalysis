@@ -252,7 +252,7 @@ export default function EndingPage() {
             <div className="insight-icon">✨</div>
             <h3>Your Perfect Match</h3>
             <p>
-              With such abundance of choice, your perfect Seoul experience isn't random—it's about
+              With such abundance of choice, your perfect Seoul experience isn't random - it's about
               finding the right <em>timing</em> and <em>place</em> that matches your travel vibe.
             </p>
           </div>
@@ -293,7 +293,7 @@ export default function EndingPage() {
           <h2>Ready to Plan Your Seoul Adventure?</h2>
           <p>
             Use the tools above to explore events by season, borough, and theme.
-            Your perfect trip is waiting—discover it now.
+            Your perfect trip is waiting - discover it now.
           </p>
           <button className="cta-button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
             Start Exploring

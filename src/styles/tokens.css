@@ -1,4 +1,4 @@
-/* Design tokens — single source of truth for the Neo-Brutalist system.
+/* Design tokens  -  single source of truth for the Neo-Brutalist system.
    Every color, spacing, radius, shadow and type value used across the
    app should reference one of these variables instead of a literal. */
 
@@ -7,7 +7,7 @@
   --color-bg: #F6EEDD;         /* warm cream page background */
   --color-surface: #FFFFFF;    /* cards */
   --color-surface-alt: #FBF4E6;/* alternating section background */
-  --color-ink: #14131C;        /* near-black — default border + text + hero frame */
+  --color-ink: #14131C;        /* near-black  -  default border + text + hero frame */
   --color-ink-soft: rgba(20, 19, 28, 0.15);
 
   --color-primary: #2A46E0;      /* cobalt blue */
@@ -57,6 +57,7 @@
 
   /* ---- type ---- */
   --font-display: 'Space Grotesk', sans-serif;
+  --font-hero: 'Unbounded', 'Space Grotesk', sans-serif; /* big expressive headline voice — hero only */
   --font-body: 'Inter', sans-serif;
 
   --text-sm: 1rem;

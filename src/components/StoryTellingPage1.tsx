@@ -82,7 +82,7 @@ export default function StoryTellingPage1() {
         </h1>
 
         <p className="intro-sub">
-          It's shaped by <strong>when you arrive</strong>— <br />
+          It's shaped by <strong>when you arrive</strong> -  <br />
           and the <strong>season you step into</strong>.
         </p>
       </div>

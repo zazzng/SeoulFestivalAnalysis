@@ -22,7 +22,7 @@ export default function StoryTellingPage3() {
         </h1>
 
         <p className="subtitle">
-          Every journey in fall unfolds among amber streets—and the crisp breeze that stirs the city.
+          Every journey in fall unfolds among amber streets - and the crisp breeze that stirs the city.
         </p>
       </div>
 
